@@ -86,6 +86,10 @@ end
 lib.update = function (dt)
   -- Now that the application has loaded, exit.
   lib.window.close()
+  -- Note: closing the window does not exit love
+  if (lib.event ~= nil) and (lib.event.quit ~= nil) then
+    lib.event.quit()
+  end
 end
 
 lib.draw = function ()
