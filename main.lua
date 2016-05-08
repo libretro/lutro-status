@@ -48,7 +48,7 @@ lib.load = function ()
   package.path = package.path .. ';love-api/?.lua'
   local API = require("love_api")
   printModule(lib, API, libTxt, "")
-  io.write("Status: "..missing.."/"..missing+have.." - "..string.format("%.0f", have/missing*100).."%", "\n")
+  io.write("Status: "..missing.."/"..missing+have.." - "..string.format("%.0f", 100 * have / (have + missing).."%", "\n")
 end
 
 lib.update = function (dt)
