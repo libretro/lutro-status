@@ -76,6 +76,9 @@ printResults = function (results, level)
 end
 
 lib.load = function ()
+  -- Write the header of the README.md file.
+  io.write(lib.filesystem.read('README.template.md'))
+
   -- Add love-api to the module load path.
   package.path = package.path .. ';love-api/?.lua'
   local API = require("love_api")
