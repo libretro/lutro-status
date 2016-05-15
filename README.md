@@ -10,19 +10,6 @@ Compares the [Lutro](https://github.com/libretro/libretro-lutro) API to the [LÖ
 - [RetroArch](http://www.libretro.com)
 - [libretro-lutro](https://github.com/libretro/libretro-lutro)
 
-## Usage
-
-```
-make
-```
-
-### Build Manually
-
-```
-git submodule update --init
-retroarch -L /usr/lib/libretro/lutro_libretro.so . > lutro-status.txt
-```
-
 ## Status
 Module OK: lutro
   Function MISSING: lutro.getVersion
