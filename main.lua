@@ -9,6 +9,101 @@ elseif (lutro ~= nil) then
   libTxt = "lutro"
 end
 
+-- Check the functions of a module or the methods of a type
+checkFunctions = function (resultTable, module, moduleApi, modTxt)
+  if (moduleApi.functions ~= nil) then
+    for k,v in pairs(moduleApi.functions) do
+      local functionResult = {}
+      functionResult.type = "Function"
+      functionResult.name = modTxt .. "." .. v.name
+      if (module ~= nil) and (module[v.name] ~= nil) then
+        functionResult.status = "OK"
+      else
+        functionResult.status = "MISSING"
+      end
+      table.insert(resultTable, functionResult)
+    end
+  end
+end
+
+-- Check a type
+checkType = function (module, moduleApi, modTxt, typeApi)
+  local typeResult = {}
+  typeResult.type = "Type"
+  typeResult.name = modTxt .. "." .. typeApi.name
+  if (module == nil) then
+    -- Module does not exist => KO
+    typeResult.status = "MISSING"
+  elseif ((typeApi.constructors ~= nil) and (table.getn(typeApi.constructors) > 0)) then
+    -- Check the constructors
+    local typeChecked = false
+    local constructorImplemented = false
+    local typeError = false
+    local constructorMissing = false
+    for k,v in pairs(typeApi.constructors) do
+      if (module[v] ~= nil) then
+        -- constructor exist
+        constructorImplemented = true
+        -- check if the constructor can be called without parameters
+        for i,functionApi in pairs(moduleApi.functions) do
+          if (functionApi.name == v) then
+            -- we have found the constructor in the API
+            -- check the variants
+            for j,variant in pairs(functionApi.variants) do
+              -- check if the variant returns the right type, and has no or optionnal arguments
+              if ((variant.returns ~= nil) and
+                  (variant.returns[1].type == typeApi.name) and
+                  ((variant.arguments == nil) or (variant.arguments[1].default ~= nil))) then
+                -- Call the constructor inside a pcall to avoid errors
+                local constructorOk, instance = pcall(function () return module[v]() end)
+                if constructorOk then
+                  -- The type is ok
+                  typeChecked = true
+                  -- Now we check the methods
+                  typeResult.children = {}
+                  checkFunctions(typeResult.children, instance, typeApi, typeResult.name)
+                  -- TODO: inherited methods
+                else
+                  typeError = true
+                end
+                break
+              end
+            end
+            break
+          end
+        end
+        -- the type has been checked, do not try the other constructors
+        if typeChecked then
+          break
+        end
+      else
+        constructorMissing = true
+      end
+    end
+    -- Result
+    if typeChecked then
+      typeResult.status = "OK"
+    elseif typeError then
+      -- constructor not correctly implemented
+      typeResult.status = "ERROR (a valid constructor for automatic check is incorrectly implemented)"
+    elseif (not constructorImplemented) then
+      -- constructors missing, assume type is missing
+      typeResult.status = "MISSING"
+    elseif constructorMissing then
+      -- the type may have several constructor, some may be suitable for automatic check but are missing
+      typeResult.status = "UNCHECKED (at least a constructor is missing, and the non-missing ones are not suitable for automatic check)"
+    else
+      -- constructors unsuitable for automatic check
+      typeResult.status = "UNCHECKED (no suitable constructor for automatic check)"
+    end
+  else
+    -- No constructor
+    typeResult.status = "UNCHECKED (no constructor in API)"
+  end
+  return typeResult
+end
+
+
 -- Check a module against its API
 checkModule = function (module, moduleApi, modTxt)
   local results = {}
@@ -22,29 +117,12 @@ checkModule = function (module, moduleApi, modTxt)
   results.children = {}
   --
   -- check functions
-  if (moduleApi.functions ~= nil) then
-    for k,v in pairs(moduleApi.functions) do
-      local functionResult = {}
-      functionResult.type = "Function"
-      functionResult.name = modTxt .. "." .. v.name
-      if (module ~= nil) and (module[v.name] ~= nil) then
-        functionResult.status = "OK"
-      else
-        functionResult.status = "MISSING"
-      end
-      table.insert(results.children, functionResult)
-    end
-  end
+  checkFunctions(results.children, module, moduleApi, modTxt)
   --
   -- check types
   if (moduleApi.types ~= nil) then
     for k,v in pairs(moduleApi.types) do
-      -- TODO: do this in a separate function, as it needs an instance to check the methods
-      local typeResult = {}
-      typeResult.type = "Type"
-      typeResult.name = modTxt .. "." .. v.name
-      typeResult.status = "UNKNOWN"
-      table.insert(results.children, typeResult)
+      table.insert(results.children, checkType(module, moduleApi, modTxt, v))
     end
   end
   --
