@@ -1,10 +1,9 @@
 skipping custom configuration.
 Module OK: lutro
   Function MISSING: lutro.getVersion
-  Function MISSING: lutro.conf
-  Type UNKNOWN: lutro.Data
-  Type UNKNOWN: lutro.Drawable
-  Type UNKNOWN: lutro.Object
+  Type UNCHECKED (no constructor in API): lutro.Data
+  Type UNCHECKED (no constructor in API): lutro.Drawable
+  Type UNCHECKED (no constructor in API): lutro.Object
   Module OK: lutro.audio
     Function MISSING: lutro.audio.getDistanceModel
     Function MISSING: lutro.audio.getDopplerScale
@@ -25,7 +24,7 @@ Module OK: lutro
     Function MISSING: lutro.audio.setVelocity
     Function OK: lutro.audio.setVolume
     Function OK: lutro.audio.stop
-    Type UNKNOWN: lutro.audio.Source
+    Type UNCHECKED (no suitable constructor for automatic check): lutro.audio.Source
   Module OK: lutro.event
     Function MISSING: lutro.event.clear
     Function MISSING: lutro.event.poll
@@ -66,15 +65,15 @@ Module OK: lutro
     Function MISSING: lutro.filesystem.setSymlinksEnabled
     Function MISSING: lutro.filesystem.unmount
     Function OK: lutro.filesystem.write
-    Type UNKNOWN: lutro.filesystem.File
-    Type UNKNOWN: lutro.filesystem.FileData
+    Type MISSING: lutro.filesystem.File
+    Type MISSING: lutro.filesystem.FileData
   Module OK: lutro.graphics
     Function MISSING: lutro.graphics.arc
-    Function MISSING: lutro.graphics.circle
+    Function OK: lutro.graphics.circle
     Function OK: lutro.graphics.clear
     Function MISSING: lutro.graphics.discard
     Function OK: lutro.graphics.draw
-    Function MISSING: lutro.graphics.ellipse
+    Function OK: lutro.graphics.ellipse
     Function OK: lutro.graphics.getBackgroundColor
     Function MISSING: lutro.graphics.getBlendMode
     Function OK: lutro.graphics.getCanvas
@@ -115,8 +114,8 @@ Module OK: lutro
     Function MISSING: lutro.graphics.newSpriteBatch
     Function MISSING: lutro.graphics.newVideo
     Function OK: lutro.graphics.origin
-    Function MISSING: lutro.graphics.points
-    Function MISSING: lutro.graphics.polygon
+    Function OK: lutro.graphics.points
+    Function OK: lutro.graphics.polygon
     Function OK: lutro.graphics.pop
     Function OK: lutro.graphics.present
     Function OK: lutro.graphics.print
@@ -145,33 +144,33 @@ Module OK: lutro
     Function OK: lutro.graphics.shear
     Function MISSING: lutro.graphics.stencil
     Function OK: lutro.graphics.translate
-    Type UNKNOWN: lutro.graphics.Canvas
-    Type UNKNOWN: lutro.graphics.Font
-    Type UNKNOWN: lutro.graphics.Mesh
-    Type UNKNOWN: lutro.graphics.Image
-    Type UNKNOWN: lutro.graphics.ParticleSystem
-    Type UNKNOWN: lutro.graphics.Quad
-    Type UNKNOWN: lutro.graphics.Shader
-    Type UNKNOWN: lutro.graphics.SpriteBatch
-    Type UNKNOWN: lutro.graphics.Text
-    Type UNKNOWN: lutro.graphics.Texture
-    Type UNKNOWN: lutro.graphics.Video
+    Type ERROR (a valid constructor for automatic check is incorrectly implemented): lutro.graphics.Canvas
+    Type UNCHECKED (at least a constructor is missing, and the non-missing ones are not suitable for automatic check): lutro.graphics.Font
+    Type MISSING: lutro.graphics.Mesh
+    Type UNCHECKED (no suitable constructor for automatic check): lutro.graphics.Image
+    Type MISSING: lutro.graphics.ParticleSystem
+    Type UNCHECKED (no suitable constructor for automatic check): lutro.graphics.Quad
+    Type MISSING: lutro.graphics.Shader
+    Type MISSING: lutro.graphics.SpriteBatch
+    Type MISSING: lutro.graphics.Text
+    Type UNCHECKED (no constructor in API): lutro.graphics.Texture
+    Type MISSING: lutro.graphics.Video
   Module OK: lutro.image
     Function MISSING: lutro.image.isCompressed
     Function MISSING: lutro.image.newCompressedData
     Function OK: lutro.image.newImageData
-    Type UNKNOWN: lutro.image.CompressedImageData
-    Type UNKNOWN: lutro.image.ImageData
+    Type MISSING: lutro.image.CompressedImageData
+    Type UNCHECKED (no suitable constructor for automatic check): lutro.image.ImageData
   Module OK: lutro.joystick
     Function OK: lutro.joystick.getJoystickCount
     Function MISSING: lutro.joystick.getJoysticks
     Function MISSING: lutro.joystick.loadGamepadMappings
     Function MISSING: lutro.joystick.saveGamepadMappings
     Function MISSING: lutro.joystick.setGamepadMapping
-    Type UNKNOWN: lutro.joystick.Joystick
+    Type MISSING: lutro.joystick.Joystick
   Module OK: lutro.keyboard
     Function MISSING: lutro.keyboard.getKeyFromScancode
-    Function MISSING: lutro.keyboard.getScancodeFromKey
+    Function OK: lutro.keyboard.getScancodeFromKey
     Function MISSING: lutro.keyboard.hasKeyRepeat
     Function MISSING: lutro.keyboard.hasTextInput
     Function OK: lutro.keyboard.isDown
@@ -194,9 +193,9 @@ Module OK: lutro
     Function OK: lutro.math.setRandomSeed
     Function MISSING: lutro.math.setRandomState
     Function MISSING: lutro.math.triangulate
-    Type UNKNOWN: lutro.math.BezierCurve
-    Type UNKNOWN: lutro.math.CompressedData
-    Type UNKNOWN: lutro.math.RandomGenerator
+    Type MISSING: lutro.math.BezierCurve
+    Type MISSING: lutro.math.CompressedData
+    Type MISSING: lutro.math.RandomGenerator
   Module OK: lutro.mouse
     Function MISSING: lutro.mouse.getCursor
     Function OK: lutro.mouse.getPosition
@@ -216,7 +215,7 @@ Module OK: lutro
     Function MISSING: lutro.mouse.setVisible
     Function MISSING: lutro.mouse.setX
     Function MISSING: lutro.mouse.setY
-    Type UNKNOWN: lutro.mouse.Cursor
+    Type MISSING: lutro.mouse.Cursor
   Module MISSING: lutro.physics
     Function MISSING: lutro.physics.getDistance
     Function MISSING: lutro.physics.getMeter
@@ -240,32 +239,32 @@ Module OK: lutro
     Function MISSING: lutro.physics.newWheelJoint
     Function MISSING: lutro.physics.newWorld
     Function MISSING: lutro.physics.setMeter
-    Type UNKNOWN: lutro.physics.Body
-    Type UNKNOWN: lutro.physics.ChainShape
-    Type UNKNOWN: lutro.physics.CircleShape
-    Type UNKNOWN: lutro.physics.Contact
-    Type UNKNOWN: lutro.physics.EdgeShape
-    Type UNKNOWN: lutro.physics.DistanceJoint
-    Type UNKNOWN: lutro.physics.Fixture
-    Type UNKNOWN: lutro.physics.FrictionJoint
-    Type UNKNOWN: lutro.physics.GearJoint
-    Type UNKNOWN: lutro.physics.Joint
-    Type UNKNOWN: lutro.physics.MotorJoint
-    Type UNKNOWN: lutro.physics.MouseJoint
-    Type UNKNOWN: lutro.physics.PolygonShape
-    Type UNKNOWN: lutro.physics.PrismaticJoint
-    Type UNKNOWN: lutro.physics.PulleyJoint
-    Type UNKNOWN: lutro.physics.RevoluteJoint
-    Type UNKNOWN: lutro.physics.RopeJoint
-    Type UNKNOWN: lutro.physics.Shape
-    Type UNKNOWN: lutro.physics.WeldJoint
-    Type UNKNOWN: lutro.physics.WheelJoint
-    Type UNKNOWN: lutro.physics.World
+    Type MISSING: lutro.physics.Body
+    Type MISSING: lutro.physics.ChainShape
+    Type MISSING: lutro.physics.CircleShape
+    Type MISSING: lutro.physics.Contact
+    Type MISSING: lutro.physics.EdgeShape
+    Type MISSING: lutro.physics.DistanceJoint
+    Type MISSING: lutro.physics.Fixture
+    Type MISSING: lutro.physics.FrictionJoint
+    Type MISSING: lutro.physics.GearJoint
+    Type MISSING: lutro.physics.Joint
+    Type MISSING: lutro.physics.MotorJoint
+    Type MISSING: lutro.physics.MouseJoint
+    Type MISSING: lutro.physics.PolygonShape
+    Type MISSING: lutro.physics.PrismaticJoint
+    Type MISSING: lutro.physics.PulleyJoint
+    Type MISSING: lutro.physics.RevoluteJoint
+    Type MISSING: lutro.physics.RopeJoint
+    Type MISSING: lutro.physics.Shape
+    Type MISSING: lutro.physics.WeldJoint
+    Type MISSING: lutro.physics.WheelJoint
+    Type MISSING: lutro.physics.World
   Module OK: lutro.sound
     Function MISSING: lutro.sound.newDecoder
     Function OK: lutro.sound.newSoundData
-    Type UNKNOWN: lutro.sound.Decoder
-    Type UNKNOWN: lutro.sound.SoundData
+    Type MISSING: lutro.sound.Decoder
+    Type UNCHECKED (no suitable constructor for automatic check): lutro.sound.SoundData
   Module OK: lutro.system
     Function MISSING: lutro.system.getClipboardText
     Function OK: lutro.system.getOS
@@ -278,8 +277,8 @@ Module OK: lutro
     Function MISSING: lutro.thread.getChannel
     Function MISSING: lutro.thread.newChannel
     Function MISSING: lutro.thread.newThread
-    Type UNKNOWN: lutro.thread.Thread
-    Type UNKNOWN: lutro.thread.Channel
+    Type MISSING: lutro.thread.Thread
+    Type MISSING: lutro.thread.Channel
   Module OK: lutro.timer
     Function MISSING: lutro.timer.getAverageDelta
     Function MISSING: lutro.timer.getDelta
@@ -293,7 +292,7 @@ Module OK: lutro
     Function MISSING: lutro.touch.getTouches
   Module MISSING: lutro.video
     Function MISSING: lutro.video.newVideoStream
-    Type UNKNOWN: lutro.video.VideoStream
+    Type MISSING: lutro.video.VideoStream
   Module OK: lutro.window
     Function OK: lutro.window.close
     Function MISSING: lutro.window.fromPixels

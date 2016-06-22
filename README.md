@@ -15,6 +15,14 @@ Compares the [Lutro](https://github.com/libretro/libretro-lutro) API to the [LÖ
 make
 ```
 
+### Parameters
+
+You can change the paths to RetroArch and where Lutro lives.
+
+```
+make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
+```
+
 ### Build Manually
 
 ```
