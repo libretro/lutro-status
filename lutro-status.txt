@@ -1,6 +1,5 @@
-skipping custom configuration.
 Module OK: lutro
-  Function MISSING: lutro.getVersion
+  Function OK: lutro.getVersion
   Type UNCHECKED (no constructor in API): lutro.Data
   Type UNCHECKED (no constructor in API): lutro.Drawable
   Type UNCHECKED (no constructor in API): lutro.Object
@@ -42,7 +41,7 @@ Module OK: lutro
     Function MISSING: lutro.filesystem.getIdentity
     Function MISSING: lutro.filesystem.getLastModified
     Function MISSING: lutro.filesystem.getRealDirectory
-    Function MISSING: lutro.filesystem.getRequirePath
+    Function OK: lutro.filesystem.getRequirePath
     Function MISSING: lutro.filesystem.getSaveDirectory
     Function MISSING: lutro.filesystem.getSize
     Function MISSING: lutro.filesystem.getSourceBaseDirectory
@@ -60,7 +59,7 @@ Module OK: lutro
     Function OK: lutro.filesystem.read
     Function MISSING: lutro.filesystem.remove
     Function OK: lutro.filesystem.setIdentity
-    Function MISSING: lutro.filesystem.setRequirePath
+    Function OK: lutro.filesystem.setRequirePath
     Function MISSING: lutro.filesystem.setSource
     Function MISSING: lutro.filesystem.setSymlinksEnabled
     Function MISSING: lutro.filesystem.unmount
@@ -169,7 +168,7 @@ Module OK: lutro
     Function MISSING: lutro.joystick.setGamepadMapping
     Type MISSING: lutro.joystick.Joystick
   Module OK: lutro.keyboard
-    Function MISSING: lutro.keyboard.getKeyFromScancode
+    Function OK: lutro.keyboard.getKeyFromScancode
     Function OK: lutro.keyboard.getScancodeFromKey
     Function MISSING: lutro.keyboard.hasKeyRepeat
     Function MISSING: lutro.keyboard.hasTextInput
