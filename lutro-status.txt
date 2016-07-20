@@ -47,6 +47,7 @@ Module OK: lutro
     Function MISSING: lutro.filesystem.getSourceBaseDirectory
     Function OK: lutro.filesystem.getUserDirectory
     Function MISSING: lutro.filesystem.getWorkingDirectory
+    Function MISSING: lutro.filesystem.init
     Function OK: lutro.filesystem.isDirectory
     Function OK: lutro.filesystem.isFile
     Function MISSING: lutro.filesystem.isFused
@@ -265,12 +266,12 @@ Module OK: lutro
     Type MISSING: lutro.sound.Decoder
     Type UNCHECKED (no suitable constructor for automatic check): lutro.sound.SoundData
   Module OK: lutro.system
-    Function MISSING: lutro.system.getClipboardText
+    Function OK: lutro.system.getClipboardText
     Function OK: lutro.system.getOS
     Function MISSING: lutro.system.getPowerInfo
-    Function MISSING: lutro.system.getProcessorCount
+    Function OK: lutro.system.getProcessorCount
     Function MISSING: lutro.system.openURL
-    Function MISSING: lutro.system.setClipboardText
+    Function OK: lutro.system.setClipboardText
     Function MISSING: lutro.system.vibrate
   Module MISSING: lutro.thread
     Function MISSING: lutro.thread.getChannel
