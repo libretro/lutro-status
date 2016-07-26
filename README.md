@@ -29,7 +29,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro`](https://love2d.org/wiki/love)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.getVersion`](https://love2d.org/wiki/love.getVersion) | Function | OK |
 | :white_medium_square: | [`lutro.Data`](https://love2d.org/wiki/love.Data) | Type | UNCHECKED (no constructor in API) |
 | :white_medium_square: | [`lutro.Drawable`](https://love2d.org/wiki/love.Drawable) | Type | UNCHECKED (no constructor in API) |
@@ -38,7 +38,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.audio`](https://love2d.org/wiki/love.audio)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.audio.getDistanceModel`](https://love2d.org/wiki/love.audio.getDistanceModel) | Function | MISSING |
 | :white_medium_square: | [`lutro.audio.getDopplerScale`](https://love2d.org/wiki/love.audio.getDopplerScale) | Function | MISSING |
 | :white_medium_square: | [`lutro.audio.getSourceCount`](https://love2d.org/wiki/love.audio.getSourceCount) | Function | MISSING |
@@ -63,7 +63,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.event`](https://love2d.org/wiki/love.event)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.event.clear`](https://love2d.org/wiki/love.event.clear) | Function | MISSING |
 | :white_medium_square: | [`lutro.event.poll`](https://love2d.org/wiki/love.event.poll) | Function | MISSING |
 | :white_medium_square: | [`lutro.event.pump`](https://love2d.org/wiki/love.event.pump) | Function | MISSING |
@@ -74,7 +74,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.filesystem`](https://love2d.org/wiki/love.filesystem)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.filesystem.append`](https://love2d.org/wiki/love.filesystem.append) | Function | MISSING |
 | :white_medium_square: | [`lutro.filesystem.areSymlinksEnabled`](https://love2d.org/wiki/love.filesystem.areSymlinksEnabled) | Function | MISSING |
 | :white_check_mark: | [`lutro.filesystem.createDirectory`](https://love2d.org/wiki/love.filesystem.createDirectory) | Function | OK |
@@ -114,7 +114,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.graphics`](https://love2d.org/wiki/love.graphics)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.graphics.arc`](https://love2d.org/wiki/love.graphics.arc) | Function | MISSING |
 | :white_check_mark: | [`lutro.graphics.circle`](https://love2d.org/wiki/love.graphics.circle) | Function | OK |
 | :white_check_mark: | [`lutro.graphics.clear`](https://love2d.org/wiki/love.graphics.clear) | Function | OK |
@@ -206,7 +206,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.image`](https://love2d.org/wiki/love.image)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.image.isCompressed`](https://love2d.org/wiki/love.image.isCompressed) | Function | MISSING |
 | :white_medium_square: | [`lutro.image.newCompressedData`](https://love2d.org/wiki/love.image.newCompressedData) | Function | MISSING |
 | :white_check_mark: | [`lutro.image.newImageData`](https://love2d.org/wiki/love.image.newImageData) | Function | OK |
@@ -216,7 +216,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.joystick`](https://love2d.org/wiki/love.joystick)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.joystick.getJoystickCount`](https://love2d.org/wiki/love.joystick.getJoystickCount) | Function | OK |
 | :white_medium_square: | [`lutro.joystick.getJoysticks`](https://love2d.org/wiki/love.joystick.getJoysticks) | Function | MISSING |
 | :white_medium_square: | [`lutro.joystick.loadGamepadMappings`](https://love2d.org/wiki/love.joystick.loadGamepadMappings) | Function | MISSING |
@@ -227,7 +227,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.keyboard`](https://love2d.org/wiki/love.keyboard)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.keyboard.getKeyFromScancode`](https://love2d.org/wiki/love.keyboard.getKeyFromScancode) | Function | OK |
 | :white_check_mark: | [`lutro.keyboard.getScancodeFromKey`](https://love2d.org/wiki/love.keyboard.getScancodeFromKey) | Function | OK |
 | :white_medium_square: | [`lutro.keyboard.hasKeyRepeat`](https://love2d.org/wiki/love.keyboard.hasKeyRepeat) | Function | MISSING |
@@ -240,7 +240,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.math`](https://love2d.org/wiki/love.math)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.math.compress`](https://love2d.org/wiki/love.math.compress) | Function | MISSING |
 | :white_medium_square: | [`lutro.math.decompress`](https://love2d.org/wiki/love.math.decompress) | Function | MISSING |
 | :white_medium_square: | [`lutro.math.gammaToLinear`](https://love2d.org/wiki/love.math.gammaToLinear) | Function | MISSING |
@@ -263,7 +263,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.mouse`](https://love2d.org/wiki/love.mouse)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.mouse.getCursor`](https://love2d.org/wiki/love.mouse.getCursor) | Function | MISSING |
 | :white_check_mark: | [`lutro.mouse.getPosition`](https://love2d.org/wiki/love.mouse.getPosition) | Function | OK |
 | :white_medium_square: | [`lutro.mouse.getRelativeMode`](https://love2d.org/wiki/love.mouse.getRelativeMode) | Function | MISSING |
@@ -287,7 +287,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.physics`](https://love2d.org/wiki/love.physics)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.physics.getDistance`](https://love2d.org/wiki/love.physics.getDistance) | Function | MISSING |
 | :white_medium_square: | [`lutro.physics.getMeter`](https://love2d.org/wiki/love.physics.getMeter) | Function | MISSING |
 | :white_medium_square: | [`lutro.physics.newBody`](https://love2d.org/wiki/love.physics.newBody) | Function | MISSING |
@@ -335,7 +335,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.sound`](https://love2d.org/wiki/love.sound)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.sound.newDecoder`](https://love2d.org/wiki/love.sound.newDecoder) | Function | MISSING |
 | :white_check_mark: | [`lutro.sound.newSoundData`](https://love2d.org/wiki/love.sound.newSoundData) | Function | OK |
 | :white_medium_square: | [`lutro.sound.Decoder`](https://love2d.org/wiki/love.sound.Decoder) | Type | MISSING |
@@ -344,7 +344,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.system`](https://love2d.org/wiki/love.system)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.system.getClipboardText`](https://love2d.org/wiki/love.system.getClipboardText) | Function | OK |
 | :white_check_mark: | [`lutro.system.getOS`](https://love2d.org/wiki/love.system.getOS) | Function | OK |
 | :white_medium_square: | [`lutro.system.getPowerInfo`](https://love2d.org/wiki/love.system.getPowerInfo) | Function | MISSING |
@@ -356,7 +356,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.thread`](https://love2d.org/wiki/love.thread)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.thread.getChannel`](https://love2d.org/wiki/love.thread.getChannel) | Function | MISSING |
 | :white_medium_square: | [`lutro.thread.newChannel`](https://love2d.org/wiki/love.thread.newChannel) | Function | MISSING |
 | :white_medium_square: | [`lutro.thread.newThread`](https://love2d.org/wiki/love.thread.newThread) | Function | MISSING |
@@ -366,7 +366,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.timer`](https://love2d.org/wiki/love.timer)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.timer.getAverageDelta`](https://love2d.org/wiki/love.timer.getAverageDelta) | Function | MISSING |
 | :white_medium_square: | [`lutro.timer.getDelta`](https://love2d.org/wiki/love.timer.getDelta) | Function | MISSING |
 | :white_medium_square: | [`lutro.timer.getFPS`](https://love2d.org/wiki/love.timer.getFPS) | Function | MISSING |
@@ -377,7 +377,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.touch`](https://love2d.org/wiki/love.touch)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.touch.getPosition`](https://love2d.org/wiki/love.touch.getPosition) | Function | MISSING |
 | :white_medium_square: | [`lutro.touch.getPressure`](https://love2d.org/wiki/love.touch.getPressure) | Function | MISSING |
 | :white_medium_square: | [`lutro.touch.getTouches`](https://love2d.org/wiki/love.touch.getTouches) | Function | MISSING |
@@ -385,14 +385,14 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 ### [`lutro.video`](https://love2d.org/wiki/love.video)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.video.newVideoStream`](https://love2d.org/wiki/love.video.newVideoStream) | Function | MISSING |
 | :white_medium_square: | [`lutro.video.VideoStream`](https://love2d.org/wiki/love.video.VideoStream) | Type | MISSING |
 
 ### [`lutro.window`](https://love2d.org/wiki/love.window)
 
 | | Name | Type | Notes |
-| --- | --- | --- | --- |
+| --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.window.close`](https://love2d.org/wiki/love.window.close) | Function | OK |
 | :white_medium_square: | [`lutro.window.fromPixels`](https://love2d.org/wiki/love.window.fromPixels) | Function | MISSING |
 | :white_medium_square: | [`lutro.window.getDisplayName`](https://love2d.org/wiki/love.window.getDisplayName) | Function | MISSING |

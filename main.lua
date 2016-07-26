@@ -148,7 +148,7 @@ printResults = function (results, level)
 
   -- If it's a module, output the header.
   if (results.type == 'Module') then
-    io.write('\n### [`' .. results.name .. '`](https://love2d.org/wiki/' .. loveApiName .. ')\n\n| | Name | Type | Notes |\n| --- | --- | --- | --- |\n')
+    io.write('\n### [`' .. results.name .. '`](https://love2d.org/wiki/' .. loveApiName .. ')\n\n| | Name | Type | Notes |\n| --- | --- | :---: | --- |\n')
   else
     -- Get the status check mark.
     local status = ''
