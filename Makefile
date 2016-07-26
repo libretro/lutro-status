@@ -4,12 +4,10 @@
 lutro=/usr/lib/libretro/lutro_libretro.so
 retroarch=retroarch
 
-lutro-status.txt: love-api/love_api.lua clean
-	$(retroarch) -L $(lutro) . > lutro-status.txt
+lutro-status.txt: love-api/love_api.lua
+	cat .README.template.md > README.md
+	$(retroarch) -L $(lutro) . >> README.md
 
 love-api/love_api.lua:
 	@git submodule init
 	@git submodule update
-
-clean:
-	@rm lutro-status.txt

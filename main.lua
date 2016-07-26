@@ -143,9 +143,22 @@ end
 
 -- Prints the results
 printResults = function (results, level)
-  local indenting = string.rep(" ", 2 * (level - 1))
-  --
-  io.write(indenting .. results.type .. " " .. results.status .. ": " .. results.name .. "\n")
+  -- Get the status check mark
+  local status = ''
+  if (results.status == 'OK') then
+    status = ':white_check_mark:'
+  else
+    status = ':white_medium_square:'
+  end
+
+  -- Display the name differently if it's a module.
+  local name = '`' .. results.name .. '`'
+  if (results.type == 'Module') then
+    name = '**`' .. name .. '`**'
+  end
+
+  -- Output the row.
+  io.write('| ' .. status .. ' | ' .. name .. ' | ' .. results.type .. " | " .. results.status .. " |\n")
   if (results.children ~= nil) then
     for k,v in pairs(results.children) do
       printResults(v, level + 1)
@@ -158,6 +171,7 @@ lib.load = function ()
   package.path = package.path .. ';love-api/?.lua'
   local API = require("love_api")
   local results = checkModule(lib, API, libTxt, true)
+  io.write('\n| :white_medium_square: | Name | Type | Notes |\n| --- | --- | --- | --- |\n')
   printResults(results, 1)
 end
 
