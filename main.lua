@@ -152,9 +152,10 @@ printResults = function (results, level)
   end
 
   -- Display the name differently if it's a module.
-  local name = '`' .. results.name .. '`'
+  local loveApiName = string.gsub(results.name, 'lutro', 'love')
+  local name = '[`' .. results.name .. '`](https://love2d.org/wiki/' .. loveApiName .. ')'
   if (results.type == 'Module') then
-    name = '**`' .. name .. '`**'
+    name = '**' .. name .. '**'
   end
 
   -- Output the row.
