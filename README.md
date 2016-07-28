@@ -347,11 +347,11 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.system.getClipboardText`](https://love2d.org/wiki/love.system.getClipboardText) | Function | OK |
 | :white_check_mark: | [`lutro.system.getOS`](https://love2d.org/wiki/love.system.getOS) | Function | OK |
-| :white_medium_square: | [`lutro.system.getPowerInfo`](https://love2d.org/wiki/love.system.getPowerInfo) | Function | MISSING |
+| :white_check_mark: | [`lutro.system.getPowerInfo`](https://love2d.org/wiki/love.system.getPowerInfo) | Function | OK |
 | :white_check_mark: | [`lutro.system.getProcessorCount`](https://love2d.org/wiki/love.system.getProcessorCount) | Function | OK |
-| :white_medium_square: | [`lutro.system.openURL`](https://love2d.org/wiki/love.system.openURL) | Function | MISSING |
+| :white_check_mark: | [`lutro.system.openURL`](https://love2d.org/wiki/love.system.openURL) | Function | OK |
 | :white_check_mark: | [`lutro.system.setClipboardText`](https://love2d.org/wiki/love.system.setClipboardText) | Function | OK |
-| :white_medium_square: | [`lutro.system.vibrate`](https://love2d.org/wiki/love.system.vibrate) | Function | MISSING |
+| :white_check_mark: | [`lutro.system.vibrate`](https://love2d.org/wiki/love.system.vibrate) | Function | OK |
 
 ### [`lutro.thread`](https://love2d.org/wiki/love.thread)
 
@@ -395,7 +395,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | --- | --- | :---: | --- |
 | :white_check_mark: | [`lutro.window.close`](https://love2d.org/wiki/love.window.close) | Function | OK |
 | :white_medium_square: | [`lutro.window.fromPixels`](https://love2d.org/wiki/love.window.fromPixels) | Function | MISSING |
-| :white_medium_square: | [`lutro.window.getDisplayName`](https://love2d.org/wiki/love.window.getDisplayName) | Function | MISSING |
+| :white_check_mark: | [`lutro.window.getDisplayName`](https://love2d.org/wiki/love.window.getDisplayName) | Function | OK |
 | :white_medium_square: | [`lutro.window.getFullscreen`](https://love2d.org/wiki/love.window.getFullscreen) | Function | MISSING |
 | :white_medium_square: | [`lutro.window.getFullscreenModes`](https://love2d.org/wiki/love.window.getFullscreenModes) | Function | MISSING |
 | :white_medium_square: | [`lutro.window.getIcon`](https://love2d.org/wiki/love.window.getIcon) | Function | MISSING |
@@ -410,8 +410,8 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`lutro.window.isVisible`](https://love2d.org/wiki/love.window.isVisible) | Function | MISSING |
 | :white_check_mark: | [`lutro.window.maximize`](https://love2d.org/wiki/love.window.maximize) | Function | OK |
 | :white_check_mark: | [`lutro.window.minimize`](https://love2d.org/wiki/love.window.minimize) | Function | OK |
-| :white_medium_square: | [`lutro.window.requestAttention`](https://love2d.org/wiki/love.window.requestAttention) | Function | MISSING |
-| :white_medium_square: | [`lutro.window.setDisplaySleepEnabled`](https://love2d.org/wiki/love.window.setDisplaySleepEnabled) | Function | MISSING |
+| :white_check_mark: | [`lutro.window.requestAttention`](https://love2d.org/wiki/love.window.requestAttention) | Function | OK |
+| :white_check_mark: | [`lutro.window.setDisplaySleepEnabled`](https://love2d.org/wiki/love.window.setDisplaySleepEnabled) | Function | OK |
 | :white_medium_square: | [`lutro.window.setFullscreen`](https://love2d.org/wiki/love.window.setFullscreen) | Function | MISSING |
 | :white_check_mark: | [`lutro.window.setIcon`](https://love2d.org/wiki/love.window.setIcon) | Function | OK |
 | :white_check_mark: | [`lutro.window.setMode`](https://love2d.org/wiki/love.window.setMode) | Function | OK |
