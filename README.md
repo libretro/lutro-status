@@ -368,7 +368,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | | Name | Type | Notes |
 | --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.timer.getAverageDelta`](https://love2d.org/wiki/love.timer.getAverageDelta) | Function | MISSING |
-| :white_medium_square: | [`lutro.timer.getDelta`](https://love2d.org/wiki/love.timer.getDelta) | Function | MISSING |
+| :white_check_mark: | [`lutro.timer.getDelta`](https://love2d.org/wiki/love.timer.getDelta) | Function | OK |
 | :white_medium_square: | [`lutro.timer.getFPS`](https://love2d.org/wiki/love.timer.getFPS) | Function | MISSING |
 | :white_check_mark: | [`lutro.timer.getTime`](https://love2d.org/wiki/love.timer.getTime) | Function | OK |
 | :white_medium_square: | [`lutro.timer.sleep`](https://love2d.org/wiki/love.timer.sleep) | Function | MISSING |
