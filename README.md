@@ -87,6 +87,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`lutro.filesystem.getRequirePath`](https://love2d.org/wiki/love.filesystem.getRequirePath) | Function | OK |
 | :white_medium_square: | [`lutro.filesystem.getSaveDirectory`](https://love2d.org/wiki/love.filesystem.getSaveDirectory) | Function | MISSING |
 | :white_medium_square: | [`lutro.filesystem.getSize`](https://love2d.org/wiki/love.filesystem.getSize) | Function | MISSING |
+| :white_medium_square: | [`lutro.filesystem.getSource`](https://love2d.org/wiki/love.filesystem.getSource) | Function | MISSING |
 | :white_medium_square: | [`lutro.filesystem.getSourceBaseDirectory`](https://love2d.org/wiki/love.filesystem.getSourceBaseDirectory) | Function | MISSING |
 | :white_check_mark: | [`lutro.filesystem.getUserDirectory`](https://love2d.org/wiki/love.filesystem.getUserDirectory) | Function | OK |
 | :white_medium_square: | [`lutro.filesystem.getWorkingDirectory`](https://love2d.org/wiki/love.filesystem.getWorkingDirectory) | Function | MISSING |
@@ -369,7 +370,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | --- | --- | :---: | --- |
 | :white_medium_square: | [`lutro.timer.getAverageDelta`](https://love2d.org/wiki/love.timer.getAverageDelta) | Function | MISSING |
 | :white_check_mark: | [`lutro.timer.getDelta`](https://love2d.org/wiki/love.timer.getDelta) | Function | OK |
-| :white_medium_square: | [`lutro.timer.getFPS`](https://love2d.org/wiki/love.timer.getFPS) | Function | MISSING |
+| :white_check_mark: | [`lutro.timer.getFPS`](https://love2d.org/wiki/love.timer.getFPS) | Function | OK |
 | :white_check_mark: | [`lutro.timer.getTime`](https://love2d.org/wiki/love.timer.getTime) | Function | OK |
 | :white_medium_square: | [`lutro.timer.sleep`](https://love2d.org/wiki/love.timer.sleep) | Function | MISSING |
 | :white_medium_square: | [`lutro.timer.step`](https://love2d.org/wiki/love.timer.step) | Function | MISSING |
@@ -405,8 +406,9 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`lutro.window.getTitle`](https://love2d.org/wiki/love.window.getTitle) | Function | OK |
 | :white_medium_square: | [`lutro.window.hasFocus`](https://love2d.org/wiki/love.window.hasFocus) | Function | MISSING |
 | :white_medium_square: | [`lutro.window.hasMouseFocus`](https://love2d.org/wiki/love.window.hasMouseFocus) | Function | MISSING |
-| :white_check_mark: | [`lutro.window.isCreated`](https://love2d.org/wiki/love.window.isCreated) | Function | OK |
 | :white_medium_square: | [`lutro.window.isDisplaySleepEnabled`](https://love2d.org/wiki/love.window.isDisplaySleepEnabled) | Function | MISSING |
+| :white_medium_square: | [`lutro.window.isMaximized`](https://love2d.org/wiki/love.window.isMaximized) | Function | MISSING |
+| :white_medium_square: | [`lutro.window.isOpen`](https://love2d.org/wiki/love.window.isOpen) | Function | MISSING |
 | :white_medium_square: | [`lutro.window.isVisible`](https://love2d.org/wiki/love.window.isVisible) | Function | MISSING |
 | :white_check_mark: | [`lutro.window.maximize`](https://love2d.org/wiki/love.window.maximize) | Function | OK |
 | :white_check_mark: | [`lutro.window.minimize`](https://love2d.org/wiki/love.window.minimize) | Function | OK |
