@@ -43,7 +43,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | | Name | Type | Notes |
 | --- | --- | :---: | --- |
 | :white_medium_square: | [`love.audio.getActiveEffects`](https://love2d.org/wiki/love.audio.getActiveEffects) | Function | MISSING |
-| :white_medium_square: | [`love.audio.getActiveSourceCount`](https://love2d.org/wiki/love.audio.getActiveSourceCount) | Function | MISSING |
+| :white_check_mark: | [`love.audio.getActiveSourceCount`](https://love2d.org/wiki/love.audio.getActiveSourceCount) | Function | OK |
 | :white_medium_square: | [`love.audio.getDistanceModel`](https://love2d.org/wiki/love.audio.getDistanceModel) | Function | MISSING |
 | :white_medium_square: | [`love.audio.getDopplerScale`](https://love2d.org/wiki/love.audio.getDopplerScale) | Function | MISSING |
 | :white_medium_square: | [`love.audio.getEffect`](https://love2d.org/wiki/love.audio.getEffect) | Function | MISSING |
@@ -58,7 +58,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.audio.isEffectsSupported`](https://love2d.org/wiki/love.audio.isEffectsSupported) | Function | MISSING |
 | :white_medium_square: | [`love.audio.newQueueableSource`](https://love2d.org/wiki/love.audio.newQueueableSource) | Function | MISSING |
 | :white_check_mark: | [`love.audio.newSource`](https://love2d.org/wiki/love.audio.newSource) | Function | OK |
-| :white_medium_square: | [`love.audio.pause`](https://love2d.org/wiki/love.audio.pause) | Function | MISSING |
+| :white_check_mark: | [`love.audio.pause`](https://love2d.org/wiki/love.audio.pause) | Function | OK |
 | :white_check_mark: | [`love.audio.play`](https://love2d.org/wiki/love.audio.play) | Function | OK |
 | :white_medium_square: | [`love.audio.setDistanceModel`](https://love2d.org/wiki/love.audio.setDistanceModel) | Function | MISSING |
 | :white_medium_square: | [`love.audio.setDopplerScale`](https://love2d.org/wiki/love.audio.setDopplerScale) | Function | MISSING |
@@ -107,7 +107,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`love.filesystem.createDirectory`](https://love2d.org/wiki/love.filesystem.createDirectory) | Function | OK |
 | :white_medium_square: | [`love.filesystem.getAppdataDirectory`](https://love2d.org/wiki/love.filesystem.getAppdataDirectory) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.getCRequirePath`](https://love2d.org/wiki/love.filesystem.getCRequirePath) | Function | MISSING |
-| :white_medium_square: | [`love.filesystem.getDirectoryItems`](https://love2d.org/wiki/love.filesystem.getDirectoryItems) | Function | MISSING |
+| :white_check_mark: | [`love.filesystem.getDirectoryItems`](https://love2d.org/wiki/love.filesystem.getDirectoryItems) | Function | OK |
 | :white_medium_square: | [`love.filesystem.getIdentity`](https://love2d.org/wiki/love.filesystem.getIdentity) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.getInfo`](https://love2d.org/wiki/love.filesystem.getInfo) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.getRealDirectory`](https://love2d.org/wiki/love.filesystem.getRealDirectory) | Function | MISSING |
@@ -463,7 +463,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.window.getVSync`](https://love2d.org/wiki/love.window.getVSync) | Function | MISSING |
 | :white_medium_square: | [`love.window.hasFocus`](https://love2d.org/wiki/love.window.hasFocus) | Function | MISSING |
 | :white_medium_square: | [`love.window.hasMouseFocus`](https://love2d.org/wiki/love.window.hasMouseFocus) | Function | MISSING |
-| :white_medium_square: | [`love.window.isDisplaySleepEnabled`](https://love2d.org/wiki/love.window.isDisplaySleepEnabled) | Function | MISSING |
+| :white_check_mark: | [`love.window.isDisplaySleepEnabled`](https://love2d.org/wiki/love.window.isDisplaySleepEnabled) | Function | OK |
 | :white_medium_square: | [`love.window.isMaximized`](https://love2d.org/wiki/love.window.isMaximized) | Function | MISSING |
 | :white_medium_square: | [`love.window.isMinimized`](https://love2d.org/wiki/love.window.isMinimized) | Function | MISSING |
 | :white_medium_square: | [`love.window.isOpen`](https://love2d.org/wiki/love.window.isOpen) | Function | MISSING |
@@ -479,6 +479,6 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`love.window.setPosition`](https://love2d.org/wiki/love.window.setPosition) | Function | OK |
 | :white_check_mark: | [`love.window.setTitle`](https://love2d.org/wiki/love.window.setTitle) | Function | OK |
 | :white_medium_square: | [`love.window.setVSync`](https://love2d.org/wiki/love.window.setVSync) | Function | MISSING |
-| :white_medium_square: | [`love.window.showMessageBox`](https://love2d.org/wiki/love.window.showMessageBox) | Function | MISSING |
+| :white_check_mark: | [`love.window.showMessageBox`](https://love2d.org/wiki/love.window.showMessageBox) | Function | OK |
 | :white_medium_square: | [`love.window.toPixels`](https://love2d.org/wiki/love.window.toPixels) | Function | MISSING |
 | :white_medium_square: | [`love.window.updateMode`](https://love2d.org/wiki/love.window.updateMode) | Function | MISSING |
