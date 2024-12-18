@@ -32,10 +32,9 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | --- | --- | :---: | --- |
 | :white_check_mark: | [`love.getVersion`](https://love2d.org/wiki/love.getVersion) | Function | OK |
 | :white_medium_square: | [`love.hasDeprecationOutput`](https://love2d.org/wiki/love.hasDeprecationOutput) | Function | MISSING |
+| :white_medium_square: | [`love.isVersionCompatible`](https://love2d.org/wiki/love.isVersionCompatible) | Function | MISSING |
 | :white_medium_square: | [`love.setDeprecationOutput`](https://love2d.org/wiki/love.setDeprecationOutput) | Function | MISSING |
-| :white_medium_square: | [`love.ByteData`](https://love2d.org/wiki/love.ByteData) | Type | UNCHECKED (no constructor in API) |
 | :white_medium_square: | [`love.Data`](https://love2d.org/wiki/love.Data) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.Drawable`](https://love2d.org/wiki/love.Drawable) | Type | UNCHECKED (no constructor in API) |
 | :white_medium_square: | [`love.Object`](https://love2d.org/wiki/love.Object) | Type | UNCHECKED (no constructor in API) |
 
 ### [`love.audio`](https://love2d.org/wiki/love.audio)
@@ -52,7 +51,6 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.audio.getOrientation`](https://love2d.org/wiki/love.audio.getOrientation) | Function | MISSING |
 | :white_medium_square: | [`love.audio.getPosition`](https://love2d.org/wiki/love.audio.getPosition) | Function | MISSING |
 | :white_medium_square: | [`love.audio.getRecordingDevices`](https://love2d.org/wiki/love.audio.getRecordingDevices) | Function | MISSING |
-| :white_medium_square: | [`love.audio.getSourceCount`](https://love2d.org/wiki/love.audio.getSourceCount) | Function | MISSING |
 | :white_medium_square: | [`love.audio.getVelocity`](https://love2d.org/wiki/love.audio.getVelocity) | Function | MISSING |
 | :white_check_mark: | [`love.audio.getVolume`](https://love2d.org/wiki/love.audio.getVolume) | Function | OK |
 | :white_medium_square: | [`love.audio.isEffectsSupported`](https://love2d.org/wiki/love.audio.isEffectsSupported) | Function | MISSING |
@@ -70,7 +68,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`love.audio.setVolume`](https://love2d.org/wiki/love.audio.setVolume) | Function | OK |
 | :white_check_mark: | [`love.audio.stop`](https://love2d.org/wiki/love.audio.stop) | Function | OK |
 | :white_medium_square: | [`love.audio.RecordingDevice`](https://love2d.org/wiki/love.audio.RecordingDevice) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.audio.Source`](https://love2d.org/wiki/love.audio.Source) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.audio.Source`](https://love2d.org/wiki/love.audio.Source) | Type | UNCHECKED (at least a constructor is missing, and the non-missing ones are not suitable for automatic check) |
 
 ### [`love.data`](https://love2d.org/wiki/love.data)
 
@@ -86,6 +84,8 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.data.newDataView`](https://love2d.org/wiki/love.data.newDataView) | Function | MISSING |
 | :white_medium_square: | [`love.data.pack`](https://love2d.org/wiki/love.data.pack) | Function | MISSING |
 | :white_medium_square: | [`love.data.unpack`](https://love2d.org/wiki/love.data.unpack) | Function | MISSING |
+| :white_medium_square: | [`love.data.ByteData`](https://love2d.org/wiki/love.data.ByteData) | Type | MISSING |
+| :white_medium_square: | [`love.data.CompressedData`](https://love2d.org/wiki/love.data.CompressedData) | Type | MISSING |
 
 ### [`love.event`](https://love2d.org/wiki/love.event)
 
@@ -105,7 +105,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.filesystem.append`](https://love2d.org/wiki/love.filesystem.append) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.areSymlinksEnabled`](https://love2d.org/wiki/love.filesystem.areSymlinksEnabled) | Function | MISSING |
 | :white_check_mark: | [`love.filesystem.createDirectory`](https://love2d.org/wiki/love.filesystem.createDirectory) | Function | OK |
-| :white_medium_square: | [`love.filesystem.getAppdataDirectory`](https://love2d.org/wiki/love.filesystem.getAppdataDirectory) | Function | MISSING |
+| :white_check_mark: | [`love.filesystem.getAppdataDirectory`](https://love2d.org/wiki/love.filesystem.getAppdataDirectory) | Function | OK |
 | :white_medium_square: | [`love.filesystem.getCRequirePath`](https://love2d.org/wiki/love.filesystem.getCRequirePath) | Function | MISSING |
 | :white_check_mark: | [`love.filesystem.getDirectoryItems`](https://love2d.org/wiki/love.filesystem.getDirectoryItems) | Function | OK |
 | :white_medium_square: | [`love.filesystem.getIdentity`](https://love2d.org/wiki/love.filesystem.getIdentity) | Function | MISSING |
@@ -133,8 +133,21 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.filesystem.setSymlinksEnabled`](https://love2d.org/wiki/love.filesystem.setSymlinksEnabled) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.unmount`](https://love2d.org/wiki/love.filesystem.unmount) | Function | MISSING |
 | :white_check_mark: | [`love.filesystem.write`](https://love2d.org/wiki/love.filesystem.write) | Function | OK |
-| :white_medium_square: | [`love.filesystem.File`](https://love2d.org/wiki/love.filesystem.File) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.filesystem.FileData`](https://love2d.org/wiki/love.filesystem.FileData) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.filesystem.DroppedFile`](https://love2d.org/wiki/love.filesystem.DroppedFile) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.filesystem.File`](https://love2d.org/wiki/love.filesystem.File) | Type | MISSING |
+| :white_medium_square: | [`love.filesystem.FileData`](https://love2d.org/wiki/love.filesystem.FileData) | Type | MISSING |
+
+### [`love.font`](https://love2d.org/wiki/love.font)
+
+| | Name | Type | Notes |
+| --- | --- | :---: | --- |
+| :white_medium_square: | [`love.font.newBMFontRasterizer`](https://love2d.org/wiki/love.font.newBMFontRasterizer) | Function | MISSING |
+| :white_medium_square: | [`love.font.newGlyphData`](https://love2d.org/wiki/love.font.newGlyphData) | Function | MISSING |
+| :white_medium_square: | [`love.font.newImageRasterizer`](https://love2d.org/wiki/love.font.newImageRasterizer) | Function | MISSING |
+| :white_medium_square: | [`love.font.newRasterizer`](https://love2d.org/wiki/love.font.newRasterizer) | Function | MISSING |
+| :white_medium_square: | [`love.font.newTrueTypeRasterizer`](https://love2d.org/wiki/love.font.newTrueTypeRasterizer) | Function | MISSING |
+| :white_medium_square: | [`love.font.GlyphData`](https://love2d.org/wiki/love.font.GlyphData) | Type | MISSING |
+| :white_medium_square: | [`love.font.Rasterizer`](https://love2d.org/wiki/love.font.Rasterizer) | Type | MISSING |
 
 ### [`love.graphics`](https://love2d.org/wiki/love.graphics)
 
@@ -169,6 +182,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.graphics.getLineStyle`](https://love2d.org/wiki/love.graphics.getLineStyle) | Function | MISSING |
 | :white_medium_square: | [`love.graphics.getLineWidth`](https://love2d.org/wiki/love.graphics.getLineWidth) | Function | MISSING |
 | :white_medium_square: | [`love.graphics.getMeshCullMode`](https://love2d.org/wiki/love.graphics.getMeshCullMode) | Function | MISSING |
+| :white_medium_square: | [`love.graphics.getPixelDimensions`](https://love2d.org/wiki/love.graphics.getPixelDimensions) | Function | MISSING |
 | :white_medium_square: | [`love.graphics.getPixelHeight`](https://love2d.org/wiki/love.graphics.getPixelHeight) | Function | MISSING |
 | :white_medium_square: | [`love.graphics.getPixelWidth`](https://love2d.org/wiki/love.graphics.getPixelWidth) | Function | MISSING |
 | :white_medium_square: | [`love.graphics.getPointSize`](https://love2d.org/wiki/love.graphics.getPointSize) | Function | MISSING |
@@ -239,17 +253,23 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.graphics.transformPoint`](https://love2d.org/wiki/love.graphics.transformPoint) | Function | MISSING |
 | :white_check_mark: | [`love.graphics.translate`](https://love2d.org/wiki/love.graphics.translate) | Function | OK |
 | :white_medium_square: | [`love.graphics.validateShader`](https://love2d.org/wiki/love.graphics.validateShader) | Function | MISSING |
-| :white_medium_square: | [`love.graphics.Canvas`](https://love2d.org/wiki/love.graphics.Canvas) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Font`](https://love2d.org/wiki/love.graphics.Font) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Image`](https://love2d.org/wiki/love.graphics.Image) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Mesh`](https://love2d.org/wiki/love.graphics.Mesh) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.ParticleSystem`](https://love2d.org/wiki/love.graphics.ParticleSystem) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Quad`](https://love2d.org/wiki/love.graphics.Quad) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Shader`](https://love2d.org/wiki/love.graphics.Shader) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.SpriteBatch`](https://love2d.org/wiki/love.graphics.SpriteBatch) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Text`](https://love2d.org/wiki/love.graphics.Text) | Type | UNCHECKED (no constructor in API) |
+| :white_check_mark: | [`love.graphics.Canvas`](https://love2d.org/wiki/love.graphics.Canvas) | Type | OK |
+| :white_medium_square: | [`love.graphics.Canvas.generateMipmaps`](https://love2d.org/wiki/love.graphics.Canvas.generateMipmaps) | Function | MISSING |
+| :white_medium_square: | [`love.graphics.Canvas.getMSAA`](https://love2d.org/wiki/love.graphics.Canvas.getMSAA) | Function | MISSING |
+| :white_medium_square: | [`love.graphics.Canvas.getMipmapMode`](https://love2d.org/wiki/love.graphics.Canvas.getMipmapMode) | Function | MISSING |
+| :white_medium_square: | [`love.graphics.Canvas.newImageData`](https://love2d.org/wiki/love.graphics.Canvas.newImageData) | Function | MISSING |
+| :white_medium_square: | [`love.graphics.Canvas.renderTo`](https://love2d.org/wiki/love.graphics.Canvas.renderTo) | Function | MISSING |
+| :white_medium_square: | [`love.graphics.Drawable`](https://love2d.org/wiki/love.graphics.Drawable) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.graphics.Font`](https://love2d.org/wiki/love.graphics.Font) | Type | ERROR (a valid constructor for automatic check is incorrectly implemented) |
+| :white_medium_square: | [`love.graphics.Image`](https://love2d.org/wiki/love.graphics.Image) | Type | UNCHECKED (at least a constructor is missing, and the non-missing ones are not suitable for automatic check) |
+| :white_medium_square: | [`love.graphics.Mesh`](https://love2d.org/wiki/love.graphics.Mesh) | Type | MISSING |
+| :white_medium_square: | [`love.graphics.ParticleSystem`](https://love2d.org/wiki/love.graphics.ParticleSystem) | Type | MISSING |
+| :white_medium_square: | [`love.graphics.Quad`](https://love2d.org/wiki/love.graphics.Quad) | Type | UNCHECKED (no suitable constructor for automatic check) |
+| :white_medium_square: | [`love.graphics.Shader`](https://love2d.org/wiki/love.graphics.Shader) | Type | MISSING |
+| :white_medium_square: | [`love.graphics.SpriteBatch`](https://love2d.org/wiki/love.graphics.SpriteBatch) | Type | MISSING |
+| :white_medium_square: | [`love.graphics.Text`](https://love2d.org/wiki/love.graphics.Text) | Type | MISSING |
 | :white_medium_square: | [`love.graphics.Texture`](https://love2d.org/wiki/love.graphics.Texture) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.graphics.Video`](https://love2d.org/wiki/love.graphics.Video) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.graphics.Video`](https://love2d.org/wiki/love.graphics.Video) | Type | MISSING |
 
 ### [`love.image`](https://love2d.org/wiki/love.image)
 
@@ -258,8 +278,8 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.image.isCompressed`](https://love2d.org/wiki/love.image.isCompressed) | Function | MISSING |
 | :white_medium_square: | [`love.image.newCompressedData`](https://love2d.org/wiki/love.image.newCompressedData) | Function | MISSING |
 | :white_check_mark: | [`love.image.newImageData`](https://love2d.org/wiki/love.image.newImageData) | Function | OK |
-| :white_medium_square: | [`love.image.CompressedImageData`](https://love2d.org/wiki/love.image.CompressedImageData) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.image.ImageData`](https://love2d.org/wiki/love.image.ImageData) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.image.CompressedImageData`](https://love2d.org/wiki/love.image.CompressedImageData) | Type | MISSING |
+| :white_medium_square: | [`love.image.ImageData`](https://love2d.org/wiki/love.image.ImageData) | Type | UNCHECKED (no suitable constructor for automatic check) |
 
 ### [`love.joystick`](https://love2d.org/wiki/love.joystick)
 
@@ -280,6 +300,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`love.keyboard.getKeyFromScancode`](https://love2d.org/wiki/love.keyboard.getKeyFromScancode) | Function | OK |
 | :white_check_mark: | [`love.keyboard.getScancodeFromKey`](https://love2d.org/wiki/love.keyboard.getScancodeFromKey) | Function | OK |
 | :white_medium_square: | [`love.keyboard.hasKeyRepeat`](https://love2d.org/wiki/love.keyboard.hasKeyRepeat) | Function | MISSING |
+| :white_medium_square: | [`love.keyboard.hasScreenKeyboard`](https://love2d.org/wiki/love.keyboard.hasScreenKeyboard) | Function | MISSING |
 | :white_medium_square: | [`love.keyboard.hasTextInput`](https://love2d.org/wiki/love.keyboard.hasTextInput) | Function | MISSING |
 | :white_check_mark: | [`love.keyboard.isDown`](https://love2d.org/wiki/love.keyboard.isDown) | Function | OK |
 | :white_medium_square: | [`love.keyboard.isScancodeDown`](https://love2d.org/wiki/love.keyboard.isScancodeDown) | Function | MISSING |
@@ -292,8 +313,6 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | --- | --- | :---: | --- |
 | :white_medium_square: | [`love.math.colorFromBytes`](https://love2d.org/wiki/love.math.colorFromBytes) | Function | MISSING |
 | :white_medium_square: | [`love.math.colorToBytes`](https://love2d.org/wiki/love.math.colorToBytes) | Function | MISSING |
-| :white_medium_square: | [`love.math.compress`](https://love2d.org/wiki/love.math.compress) | Function | MISSING |
-| :white_medium_square: | [`love.math.decompress`](https://love2d.org/wiki/love.math.decompress) | Function | MISSING |
 | :white_medium_square: | [`love.math.gammaToLinear`](https://love2d.org/wiki/love.math.gammaToLinear) | Function | MISSING |
 | :white_medium_square: | [`love.math.getRandomSeed`](https://love2d.org/wiki/love.math.getRandomSeed) | Function | MISSING |
 | :white_medium_square: | [`love.math.getRandomState`](https://love2d.org/wiki/love.math.getRandomState) | Function | MISSING |
@@ -308,10 +327,9 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`love.math.setRandomSeed`](https://love2d.org/wiki/love.math.setRandomSeed) | Function | OK |
 | :white_medium_square: | [`love.math.setRandomState`](https://love2d.org/wiki/love.math.setRandomState) | Function | MISSING |
 | :white_medium_square: | [`love.math.triangulate`](https://love2d.org/wiki/love.math.triangulate) | Function | MISSING |
-| :white_medium_square: | [`love.math.BezierCurve`](https://love2d.org/wiki/love.math.BezierCurve) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.math.CompressedData`](https://love2d.org/wiki/love.math.CompressedData) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.math.RandomGenerator`](https://love2d.org/wiki/love.math.RandomGenerator) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.math.Transform`](https://love2d.org/wiki/love.math.Transform) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.math.BezierCurve`](https://love2d.org/wiki/love.math.BezierCurve) | Type | MISSING |
+| :white_medium_square: | [`love.math.RandomGenerator`](https://love2d.org/wiki/love.math.RandomGenerator) | Type | MISSING |
+| :white_medium_square: | [`love.math.Transform`](https://love2d.org/wiki/love.math.Transform) | Type | MISSING |
 
 ### [`love.mouse`](https://love2d.org/wiki/love.mouse)
 
@@ -323,7 +341,6 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.mouse.getSystemCursor`](https://love2d.org/wiki/love.mouse.getSystemCursor) | Function | MISSING |
 | :white_check_mark: | [`love.mouse.getX`](https://love2d.org/wiki/love.mouse.getX) | Function | OK |
 | :white_check_mark: | [`love.mouse.getY`](https://love2d.org/wiki/love.mouse.getY) | Function | OK |
-| :white_medium_square: | [`love.mouse.hasCursor`](https://love2d.org/wiki/love.mouse.hasCursor) | Function | MISSING |
 | :white_medium_square: | [`love.mouse.isCursorSupported`](https://love2d.org/wiki/love.mouse.isCursorSupported) | Function | MISSING |
 | :white_check_mark: | [`love.mouse.isDown`](https://love2d.org/wiki/love.mouse.isDown) | Function | OK |
 | :white_medium_square: | [`love.mouse.isGrabbed`](https://love2d.org/wiki/love.mouse.isGrabbed) | Function | MISSING |
@@ -336,7 +353,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.mouse.setVisible`](https://love2d.org/wiki/love.mouse.setVisible) | Function | MISSING |
 | :white_medium_square: | [`love.mouse.setX`](https://love2d.org/wiki/love.mouse.setX) | Function | MISSING |
 | :white_medium_square: | [`love.mouse.setY`](https://love2d.org/wiki/love.mouse.setY) | Function | MISSING |
-| :white_medium_square: | [`love.mouse.Cursor`](https://love2d.org/wiki/love.mouse.Cursor) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.mouse.Cursor`](https://love2d.org/wiki/love.mouse.Cursor) | Type | MISSING |
 
 ### [`love.physics`](https://love2d.org/wiki/love.physics)
 
@@ -392,8 +409,8 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | --- | --- | :---: | --- |
 | :white_medium_square: | [`love.sound.newDecoder`](https://love2d.org/wiki/love.sound.newDecoder) | Function | MISSING |
 | :white_check_mark: | [`love.sound.newSoundData`](https://love2d.org/wiki/love.sound.newSoundData) | Function | OK |
-| :white_medium_square: | [`love.sound.Decoder`](https://love2d.org/wiki/love.sound.Decoder) | Type | UNCHECKED (no constructor in API) |
-| :white_medium_square: | [`love.sound.SoundData`](https://love2d.org/wiki/love.sound.SoundData) | Type | UNCHECKED (no constructor in API) |
+| :white_medium_square: | [`love.sound.Decoder`](https://love2d.org/wiki/love.sound.Decoder) | Type | MISSING |
+| :white_medium_square: | [`love.sound.SoundData`](https://love2d.org/wiki/love.sound.SoundData) | Type | UNCHECKED (no suitable constructor for automatic check) |
 
 ### [`love.system`](https://love2d.org/wiki/love.system)
 
@@ -451,6 +468,8 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_check_mark: | [`love.window.close`](https://love2d.org/wiki/love.window.close) | Function | OK |
 | :white_medium_square: | [`love.window.fromPixels`](https://love2d.org/wiki/love.window.fromPixels) | Function | MISSING |
 | :white_medium_square: | [`love.window.getDPIScale`](https://love2d.org/wiki/love.window.getDPIScale) | Function | MISSING |
+| :white_medium_square: | [`love.window.getDesktopDimensions`](https://love2d.org/wiki/love.window.getDesktopDimensions) | Function | MISSING |
+| :white_medium_square: | [`love.window.getDisplayCount`](https://love2d.org/wiki/love.window.getDisplayCount) | Function | MISSING |
 | :white_check_mark: | [`love.window.getDisplayName`](https://love2d.org/wiki/love.window.getDisplayName) | Function | OK |
 | :white_medium_square: | [`love.window.getDisplayOrientation`](https://love2d.org/wiki/love.window.getDisplayOrientation) | Function | MISSING |
 | :white_medium_square: | [`love.window.getFullscreen`](https://love2d.org/wiki/love.window.getFullscreen) | Function | MISSING |
