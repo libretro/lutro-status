@@ -116,7 +116,7 @@ make retroarch=path/to/retroarch lutro=path/to/lutro_libretro.so
 | :white_medium_square: | [`love.filesystem.getSource`](https://love2d.org/wiki/love.filesystem.getSource) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.getSourceBaseDirectory`](https://love2d.org/wiki/love.filesystem.getSourceBaseDirectory) | Function | MISSING |
 | :white_check_mark: | [`love.filesystem.getUserDirectory`](https://love2d.org/wiki/love.filesystem.getUserDirectory) | Function | OK |
-| :white_medium_square: | [`love.filesystem.getWorkingDirectory`](https://love2d.org/wiki/love.filesystem.getWorkingDirectory) | Function | MISSING |
+| :white_check_mark: | [`love.filesystem.getWorkingDirectory`](https://love2d.org/wiki/love.filesystem.getWorkingDirectory) | Function | OK |
 | :white_medium_square: | [`love.filesystem.init`](https://love2d.org/wiki/love.filesystem.init) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.isFused`](https://love2d.org/wiki/love.filesystem.isFused) | Function | MISSING |
 | :white_medium_square: | [`love.filesystem.lines`](https://love2d.org/wiki/love.filesystem.lines) | Function | MISSING |
